@@ -1,0 +1,33 @@
+/* || Pokemon Type Prediction Styles */
+/* || Header */
+.header-container{
+    width: 100%;
+}
+
+.header{
+    margin: 5vh auto 0;
+    width: 50%;
+    text-align: center;
+}
+
+/* || Image Upload */
+.image-form-container{
+    width: 100%;
+}
+
+.image-form{
+    margin: 5vh auto 0;
+    width: 50%;
+    text-align: center;
+}
+
+.image-form > *{
+    margin: 0;
+}
+
+#input-image{
+    width: 256px;
+    height: 256px;
+    display:none;
+    margin: 0 auto;
+}

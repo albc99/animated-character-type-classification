@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+
+        <!-- General website information -->
+        {% block metadescription %}{% endblock %}
+        <meta name="keywords" content="MSU HTML CSS JS backend back-end Jinja MySQL
+        Python Flask CSE 404 Gen 1 Pokemon Type Prediction Machine Learning Resnet Resnet152 Model Image Classifier Supervised Learning">
+        <meta name="author" content="Adam Kasumovic">
+        <title>Generation I Pokémon Type Image Classifier</title>
+
+        <!-- Custom icon -->
+        <link rel="apple-touch-icon" sizes="180x180"
+              href="{{ url_for('static', filename='main/images/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32"
+              href="{{ url_for('static', filename='main/images/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16"
+              href="{{ url_for('static', filename='main/images/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ url_for('static', filename='main/documents/site.webmanifest') }}">
+
+        <!-- CSS links -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='main/css/main.css') }}">
+        {% block extracss %}{% endblock %}
+
+        <!-- Responsive design essential -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Any additional fonts -->
+        {% block extrafonts %}{% endblock %}
+
+        <!-- JS scipts -->
+        {% block extrajs %}{% endblock %}
+    </head>
+    <body>
+        {% block mainblock %}{% endblock %}
+    </body>
+</html>

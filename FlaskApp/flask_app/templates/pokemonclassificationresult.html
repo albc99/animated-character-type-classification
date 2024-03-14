@@ -1,0 +1,36 @@
+{% extends 'shared/layout.html' %}
+
+{% block metadescription %}
+<meta name="description" content="The results page for the Pokemon Type Prediction App.">
+{% endblock %}
+
+{% block extracss %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='main/css/pokemonclassificationresult.css') }}">
+{% endblock %}
+
+{% block extrajs %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js" defer></script>
+    <script src="{{ url_for('static', filename='main/js/pokemonclassificationresult.js') }}" defer></script>
+{% endblock %}
+
+{% block mainblock %}
+<main>
+    <div class="header-container">
+        <h1 class="header">
+            This Pokémon's type is:&nbsp;<span style="color: {{ type_color }}">{{ prediction }}</span>
+        </h1>
+    </div>
+    <div class="result-container">
+        <div class="image-container">
+            <img id="input-image" src="#" alt="Your uploaded image." />
+            <br>
+            <br>
+            <input class="hover-able try-again-button" id="try-again" type="submit" title="Hit the Try Again? button." value="Try Again?">
+        </div>
+    </div>
+</main>
+{% endblock %}
+
+{% block footercontent %}
+{% endblock %}

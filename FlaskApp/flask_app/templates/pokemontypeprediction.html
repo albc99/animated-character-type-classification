@@ -1,0 +1,54 @@
+{% extends 'shared/layout.html' %}
+
+{% block metadescription %}
+<meta name="description" content="The input form page for the Pokemon Type Prediction App.">
+{% endblock %}
+
+{% block extracss %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='main/css/pokemontypeprediction.css') }}">
+{% endblock %}
+
+{% block extrajs %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js" defer></script>
+    <script src="{{ url_for('static', filename='main/js/pokemontypeprediction.js') }}" defer></script>
+{% endblock %}
+
+{% block mainblock %}
+<main>
+    <div class="header-container">
+        <h1 class="header">
+            <p>
+                Insert a PNG or JPEG of a Pokémon image
+            </p>
+            (or just any image for fun)!
+        </h1>
+        <h2 class="header">
+            <p>
+                For best results, use a Generation I Pokémon image
+            </p>
+            at least 256 pixels wide and 256 pixels tall.
+        </h2>
+    </div>
+    <div class="image-form-container">
+        <form class="image-form" action="/pokemonclassificationresult" method="post"
+                  enctype="multipart/form-data">
+            <label for="image">Choose an image:</label>
+
+            <input type="file"
+                   name="image"
+                   accept=".jpg, .jpeg, .png"
+                   title="Upload a PNG or JPEG."
+                   onchange="readURL(this);">
+            <br>
+            <br>
+            <img id="input-image" src="#" alt="Your uploaded image." />
+            <br>
+            <input class="hover-able submit-button" id="submit" type="submit" title="Hit the Submit button." value="Submit">
+        </form>
+    </div>
+</main>
+{% endblock %}
+
+{% block footercontent %}
+{% endblock %}

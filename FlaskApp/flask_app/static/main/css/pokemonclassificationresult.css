@@ -1,0 +1,33 @@
+/* || Pokemon Classification Result Styles */
+/* || Header */
+.header-container{
+    width: 100%;
+}
+
+.header{
+    margin: 5vh auto 0;
+    width: 50%;
+    text-align: center;
+}
+
+/* || Image Upload */
+.result-container{
+    width: 100%;
+}
+
+.image-container{
+    margin: 2.5vh auto 0;
+    width: 50%;
+    text-align: center;
+}
+
+.image-container > *{
+    margin: 0;
+}
+
+
+#input-image{
+    width: 256px;
+    height: 256px;
+    margin: 0 auto;
+}

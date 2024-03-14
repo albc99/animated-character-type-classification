@@ -1,0 +1,21 @@
+/* || General Styles */
+/* Everything has no margin or padding by default */
+html {
+    margin: 0;
+    padding: 0;
+}
+*, *::before, *::after {
+    margin: inherit;
+    padding: inherit;
+}
+
+/* Main tags */
+body {
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;  /* Alternate box */
+}
+
+/* Hoverables */
+.hover-able:hover {
+    opacity: 0.5;
+}
